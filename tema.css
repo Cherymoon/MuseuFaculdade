@@ -1,0 +1,49 @@
+table {
+    font-size: 1em;
+    border-bottom: 5px solid #fd7e14;
+}
+
+table th {
+    background-color: #ffc107;
+    border-bottom: 3px solid #fd7e14;
+}
+
+table td {
+    padding: 20px;
+    vertical-align: top;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+table tr:hover {
+    background-color: #ffe28a;
+}
+
+input, textarea, select {
+    font-size: 1.5em;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    font-size: 1.5em;
+    background-color: #ffc107;
+    padding: 5px;
+    border: 1px solid red;
+}
+
+label {
+    font-weight: bold;
+}
+
+* {
+    font-family: "Trebuchet MS",
+    Helvetica,
+    sans-serif;
+    line-height: 1.6em;
+
+}
+body {
+    box-sizing: border-box;
+    padding: 0 2em;
+}

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="tema.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>Cadastrar Obra</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="form">
+            <form>
+                <fieldset>
+                    <legend>Informações sobre a obra</legend>
+                    <label for="nmObra">Nome</label><br />
+                    <input maxlength="100" type="text" id="nmObra" name="nmObra" placeholder="One Piece"
+                        onfocus="removeBordaErros(event)"><br />
+
+                    <label for="nmAutor">Autor</label><br />
+                    <input maxlength="100" type="text" id="nmAutor" name="nmAutor" placeholder="Eiichiro Oda"
+                        onfocus="removeBordaErros(event)"><br />
+
+                    <label for="nrAnoObra">Ano</label><br />
+                    <input maxlength="4" type="text" id="nrAnoObra" name="nrAnoObra" placeholder="1997"
+                        onfocus="removeBordaErros(event)"><br />
+
+                    <label for="dsPeriodoObra">Período</label><br />
+                    <select id="dsPeriodoObra" name="dsPeriodoObra" onfocus="removeBordaErros(event)">
+                        <option selected disabled value="vazio">Selecione...</option>
+                        <option value="antesCristo">a.C.</option>
+                        <option value="depoisCristo">d.C.</option>
+                    </select><br />
+
+                    <label for="dsTipoObra">Tipo</label><br />
+                    <select id="dsTipoObra" name="dsTipoObra" onfocus="removeBordaErros(event)">
+                        <option selected disabled value="vazio">Selecione...</option>
+                        <option value="quadro">Quadro</option>
+                        <option value="escultura">Escultura</option>
+                        <option value="outro">Outro</option>
+                    </select><br />
+
+                    <label for="dsDetalhes">Detalhes</label><br />
+                    <textarea maxlength="1000" id="dsDetalhes" name="dsDetalhes"
+                        placeholder="Escrito e ilustrado por Eiichiro Oda..."></textarea><br />
+                    <ul id="erros">
+
+                    </ul>
+                    <button id="btnCadastro" onclick="return enviarForm()" type="button">Registrar</button>
+                </fieldset>
+            </form>
+        </div>
+        <div id="tabela" class="hidden">
+            <table>
+                <thead>
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Ano</th>
+                    <th>Período</th>
+                    <th>Tipo</th>
+                    <th>Ação</th>
+                </thead>
+                <tbody id="t-body">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div id="detalhamento" class="hidden">
+            <div class="detalhe">
+                <span id="detalhe-text"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
